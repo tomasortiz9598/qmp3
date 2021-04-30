@@ -2,6 +2,8 @@ import org.junit.Assert;
 import org.junit.Test;
 import prendas.*;
 
+import java.awt.*;
+
 public class PrendasTest extends  MainTest{
 
   //uso assertTrue porque sino me tira un deprecation warning
@@ -12,17 +14,23 @@ public class PrendasTest extends  MainTest{
   }
 
   @Test
-  public void borradorPantalonNegro(){
-    Assert.assertTrue(Categoria.INFERIOR ==  this.borradorPantalonNegro.prenda.tipo.getCategoria());
+  public void borradorPantalonNegroConCategoriaInferior(){
+    Assert.assertTrue(Categoria.INFERIOR ==  this.pantalonNegro.tipo.getCategoria());
   }
 
-//  @Test
-//  public void sacoLiquidacion(){
-//    Assert.assertTrue(100 == this.saco.calcularPrecio());
-//  }
-//  @Test
-//  public void camisaPromocion(){
-//    Assert.assertTrue(85 == this.camisa.calcularPrecio());
-//  }
+  @Test
+  public void borradorPantalonNegroColor(){
+    Assert.assertTrue(Color.BLACK ==  this.pantalonNegro.colorPrimario);
+  }
+  @Test
+  public void borradorPantalonNegroColorSecundarioNull(){
+    Assert.assertTrue(null ==  this.pantalonNegro.colorSecundario);
+  }
+
+  @Test
+  public void borradorPantalonNegroTrama(){
+    Assert.assertTrue(Trama.LISA ==  this.pantalonNegro.trama);
+  }
+
 
 }

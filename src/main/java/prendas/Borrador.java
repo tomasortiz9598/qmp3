@@ -27,6 +27,6 @@ public class Borrador {
     this.trama =trama;
   }
   public void setearPrenda(){
-    this.prenda = new Prenda(this.tipo, this.material, this.colorPrimario, this.colorSecundario);
+    this.prenda = new Prenda(this.tipo, this.material, this.colorPrimario, this.colorSecundario, this.trama);
   }
 }

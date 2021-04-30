@@ -7,7 +7,7 @@ public class Uniforme {
   public Prenda prendaInferior;
   public Prenda calzado;
 
-  private static Uniforme traerUniforme(Institucion institucion){
+  public static Uniforme traerUniforme(Institucion institucion){
     return new Uniforme(institucion.traerParteSuperior(), institucion.traerParteInferior(), institucion.traerCalzado());
   }
 
@@ -16,4 +16,5 @@ public class Uniforme {
     this.prendaInferior = prendaInferior;
     this.calzado = calzado;
   }
+
 }
