@@ -12,8 +12,8 @@ public class PrendasTest extends  MainTest{
   }
 
   @Test
-  public void pantalon(){
-    Assert.assertTrue(Categoria.INFERIOR ==  this.pantalon.categoria());
+  public void borradorPantalonNegro(){
+    Assert.assertTrue(Categoria.INFERIOR ==  this.borradorPantalonNegro.prenda.tipo.getCategoria());
   }
 
 //  @Test
