@@ -8,7 +8,7 @@ public class MainTest {
   Prenda pantalonNegro;
   @Before
   public void init() {
-    this.borradorPantalonNegro.configurar(Material.TELA, Color.BLACK, null);
+    this.borradorPantalonNegro.configurar(Material.TELA, Color.BLACK, null, 10);
     this.borradorPantalonNegro.setearPrenda();
     this.pantalonNegro = this.borradorPantalonNegro.prenda;
   }

@@ -11,15 +11,17 @@ public class Borrador {
   private Color colorPrimario;
   private Color colorSecundario;
   private Trama trama = Trama.LISA;
+  private Integer temperaturaMaxima;
 
   public Borrador(Tipo tipo){
     this.tipo = tipo;
   }
 
-  public void configurar(Material material, Color colorPrimario, Color colorSecundario){
+  public void configurar(Material material, Color colorPrimario, Color colorSecundario, Integer temperaturaMaxima ){
     this.material = requireNonNull(material, "La prenda requiere un material");
     this.colorPrimario = requireNonNull(colorPrimario, "La prenda requiere un colorPrimario");
     this.colorSecundario = colorSecundario;
+    this.temperaturaMaxima = temperaturaMaxima;
 
   }
 
@@ -27,6 +29,6 @@ public class Borrador {
     this.trama =trama;
   }
   public void setearPrenda(){
-    this.prenda = new Prenda(this.tipo, this.material, this.colorPrimario, this.colorSecundario, this.trama);
+    this.prenda = new Prenda(this.tipo, this.material, this.colorPrimario, this.colorSecundario, this.trama, this.temperaturaMaxima);
   }
 }
