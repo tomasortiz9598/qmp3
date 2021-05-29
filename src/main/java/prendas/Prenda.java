@@ -31,6 +31,7 @@ public class Prenda {
     return this.tipo.getCategoria();
   }
 
+
   public boolean aptaParaTemperatura(EstadoClima climaActual){
     return climaActual.temperatura <= this.temperaturaMaxima;
   }

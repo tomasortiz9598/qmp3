@@ -28,7 +28,8 @@ public class Borrador {
   public void configurarTrama(Trama trama){
     this.trama =trama;
   }
-  public void setearPrenda(){
-    this.prenda = new Prenda(this.tipo, this.material, this.colorPrimario, this.colorSecundario, this.trama, this.temperaturaMaxima);
+
+  public Prenda setearPrenda(){
+    return new Prenda(this.tipo, this.material, this.colorPrimario, this.colorSecundario, this.trama, this.temperaturaMaxima);
   }
 }

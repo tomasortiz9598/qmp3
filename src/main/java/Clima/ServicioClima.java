@@ -12,14 +12,14 @@ public class ServicioClima {
   private WeatherAPI api;
   private String locacion;
 
-  public ServicioClima(WeatherAPI api, Duration validez, String locacion){
+  public ServicioClima(WeatherAPI api, Duration validez, String locacion) {
     this.api = api;
     this.validez =validez;
     this.locacion = locacion;
 
   }
 
-  public EstadoClima actual(){
+  public EstadoClima actual() {
     if(this.respuesta == null || this.expiro()) {
 
       this.respuesta = this.api.obtenerClima(this.locacion);

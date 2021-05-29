@@ -10,7 +10,7 @@ import uniformes.Uniforme;
 
 import java.awt.*;
 
-public class UniformeTest extends  MainTest {
+public class UniformeTest extends  MainConfiguration {
   Uniforme uniformeSanJuan;
   Uniforme uniformeJhonson;
 
@@ -20,37 +20,32 @@ public class UniformeTest extends  MainTest {
     this.uniformeJhonson = Uniforme.traerUniforme(new InstitucionJhonson());
   }
   @Test
-  public void dummy(){
-    Assert.assertTrue(true);
-  }
-
-  @Test
   public void sanJuanChomba(){
-    Assert.assertTrue(Tipo.CHOMBA ==  this.uniformeSanJuan.prendaSuperior.tipo);
+    Assert.assertEquals(Tipo.CHOMBA,  this.uniformeSanJuan.prendaSuperior.tipo);
   }
 
   @Test
   public void sanJuanPantalon(){
-    Assert.assertTrue(Tipo.PANTALON ==  this.uniformeSanJuan.prendaInferior.tipo);
+    Assert.assertEquals(Tipo.PANTALON,  this.uniformeSanJuan.prendaInferior.tipo);
   }
   @Test
   public void sanJuanCalzado(){
-    Assert.assertTrue(Tipo.ZAPATILLA ==  this.uniformeSanJuan.calzado.tipo);
+    Assert.assertEquals(Tipo.ZAPATILLA,  this.uniformeSanJuan.calzado.tipo);
   }
 
 
   @Test
   public void jhonsonCamisa(){
-    Assert.assertTrue(Tipo.CAMISA ==  this.uniformeJhonson.prendaSuperior.tipo);
+    Assert.assertEquals(Tipo.CAMISA,  this.uniformeJhonson.prendaSuperior.tipo);
   }
 
   @Test
   public void jhonsonPantalon(){
-    Assert.assertTrue(Tipo.PANTALON ==  this.uniformeJhonson.prendaInferior.tipo);
+    Assert.assertEquals(Tipo.PANTALON,  this.uniformeJhonson.prendaInferior.tipo);
   }
   @Test
   public void jhonsonCalzado(){
-    Assert.assertTrue(Tipo.ZAPATILLA ==  this.uniformeJhonson.calzado.tipo);
+    Assert.assertEquals(Tipo.ZAPATILLA,  this.uniformeJhonson.calzado.tipo);
   }
 
 }

@@ -13,16 +13,14 @@ public class InstitucionSanJuan implements Institucion {
     Borrador borradorCalzado;
     borradorCalzado = new Borrador(Tipo.ZAPATILLA);
     borradorCalzado.configurar(Material.TELA, Color.WHITE, null, 40);
-    borradorCalzado.setearPrenda();
-    return borradorCalzado.prenda;
+    return borradorCalzado.setearPrenda();
   }
 
   public Prenda traerParteSuperior() {
     Borrador parteSuperior;
     parteSuperior = new Borrador(Tipo.CHOMBA);
     parteSuperior.configurar(Material.PIQUE, Color.GREEN, null, 14);
-    parteSuperior.setearPrenda();
-    return parteSuperior.prenda;
+    return parteSuperior.setearPrenda();
 
   }
 
@@ -30,7 +28,6 @@ public class InstitucionSanJuan implements Institucion {
     Borrador parteInferior;
     parteInferior = new Borrador(Tipo.PANTALON);
     parteInferior.configurar(Material.ACETATO, Color.GRAY, null, 30);
-    parteInferior.setearPrenda();
-    return parteInferior.prenda;
+    return parteInferior.setearPrenda();
   }
 }
