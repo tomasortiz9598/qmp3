@@ -39,4 +39,7 @@ public class Usuario {
     sugerencia.efectuarSugerencia();
   }
 
+  public void rechazarSugerencia(Sugerencia sugerencia) {
+    this.sugerencias.remove(sugerencia);
+  }
 }
