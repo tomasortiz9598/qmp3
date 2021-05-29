@@ -46,16 +46,18 @@ public class UsuariosTest extends MainConfiguration {
 
   @Test
   public void hagoSugerenciaDeQuitar() {
-    this.jose.recibirSugerencia(new SugerenciaQuitar(this.pantalonNegro, this.ropaDeViaje));
-    this.jose.getSugerencias().get(0).efectuarSugerencia();
+    Sugerencia sugerencia = new SugerenciaQuitar(this.pantalonNegro, this.ropaDeViaje);
+    this.jose.recibirSugerencia(sugerencia);
+    this.jose.aceptarSugerencia(sugerencia);
     Assert.assertFalse(this.jose.getGuardarropas().get(0).prendas.contains(this.pantalonNegro));
   }
 
 
   @Test
   public void hagoSugerenciaDeAgregar() {
-    this.jose.recibirSugerencia(new SugerenciaAgregar(this.pantalonNegro, this.ropaDeViaje));
-    this.jose.getSugerencias().get(0).efectuarSugerencia();
+    Sugerencia sugerencia = new SugerenciaAgregar(this.pantalonNegro, this.ropaDeViaje);
+    this.jose.recibirSugerencia(sugerencia);
+    this.jose.aceptarSugerencia(sugerencia);
     Assert.assertTrue(this.jose.getGuardarropas().get(0).prendas.contains(this.pantalonNegro));
   }
 

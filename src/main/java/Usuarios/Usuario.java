@@ -34,4 +34,9 @@ public class Usuario {
   public List<Sugerencia> getSugerencias() {
     return this.sugerencias;
   }
+
+  public void aceptarSugerencia(Sugerencia sugerencia) {
+    sugerencia.efectuarSugerencia();
+  }
+
 }
