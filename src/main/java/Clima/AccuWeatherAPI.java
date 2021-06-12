@@ -23,6 +23,11 @@ public final class AccuWeatherAPI implements WeatherAPI {
     }});
   }
 
+  public  Map<String, List<String>> getAlerts(String city) {
+    return new HashMap<String, List<String>>() {{
+      put("CurrentAlerts", Arrays.asList("STORM", "HAIL"));
+    }};
+  }
 
   public List<EstadoClima> obtenerClima(String direccion) {
     return this.getWeather(direccion)

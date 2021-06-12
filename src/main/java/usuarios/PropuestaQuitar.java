@@ -1,14 +1,14 @@
-package Usuarios;
+package usuarios;
 
 import guardarropa.Guardarropa;
 import prendas.Prenda;
 
-public class SugerenciaQuitar implements Sugerencia{
+public class PropuestaQuitar implements Propuesta {
   Prenda prenda;
   Guardarropa guardarropa;
   Boolean efectuada;
 
-  public SugerenciaQuitar(Prenda prenda, Guardarropa guardarropa) {
+  public PropuestaQuitar(Prenda prenda, Guardarropa guardarropa) {
     this.prenda = prenda;
     this.guardarropa = guardarropa;
   }
